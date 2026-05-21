@@ -1,4 +1,6 @@
-# VITOS
+# frontOS
+
+[Try it here!](https://frontosfun.netlify.app/)
 
 A retro desktop environment simulator that recreates the look and feel of classic Windows XP in the browser. Built with React, TypeScript, and Vite.
 
