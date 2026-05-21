@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  /* Original XP-like Colors */
+  --xp-orange: #ec722e;
+  --xp-green: #7dc343;
+  --xp-blue: #64a2d8;
+  --xp-yellow: #eed842;
+
+  /* Darker XP Blues (Luna Theme) */
+  --xp-blue-dark: #0054e3;
+  --xp-blue-deep: #003b7c;
+  --xp-blue-muted-dark: #3a6ea5;
+
+  /* Darker XP Greens (Olive Green Theme) */
+  --xp-green-dark-olive: #8ba169;
+  --xp-green-saturated-dark: #599764;
+  --xp-green-muted-deep: #4a5d4a;
+}
+
+/* Original XP-like Colors */
+.bg-xp-yellow {
+  background-color: var(--xp-yellow);
+}
+
+.bg-xp-green {
+  background-color: var(--xp-green);
+}
+
+.bg-xp-orange {
+  background-color: var(--xp-orange);
+}
+
+.bg-xp-blue {
+  background-color: var(--xp-blue);
+}
+
+/* Darker XP Blues (Luna Theme) */
+.bg-xp-blue-dark {
+  background-color: var(--xp-blue-dark);
+}
+
+.bg-xp-blue-deep {
+  background-color: var(--xp-blue-deep);
+}
+
+.bg-xp-blue-muted-dark {
+  background-color: var(--xp-blue-muted-dark);
+}
+
+/* Darker XP Greens (Olive Green Theme) */
+.bg-xp-green-dark-olive {
+  background-color: var(--xp-green-dark-olive);
+}
+
+.bg-xp-green-saturated-dark {
+  background-color: var(--xp-green-saturated-dark);
+}
+
+.bg-xp-green-muted-deep {
+  background-color: var(--xp-green-muted-deep);
+}
