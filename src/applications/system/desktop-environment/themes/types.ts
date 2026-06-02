@@ -35,7 +35,7 @@ export interface StartButtonThemeStyles {
   startButtonIcon: Pick<BaseStyleGroup, "iconSrc" | "iconStyle">;
 }
 export interface StartMenuStyles {
-  wrapper: Pick<BaseStyleGroup, "display" | "color" | "border">;
+  wrapper: Pick<BaseStyleGroup, "display" | "color" | "border" | "zIndex">;
   startMenuHeader: Pick<BaseStyleGroup, "display" | "color" | "border">;
   profilepicture: Pick<BaseStyleGroup, "iconSrc" | "iconStyle" | "iconAlt">;
   username: Pick<BaseStyleGroup, "text">;
@@ -43,7 +43,7 @@ export interface StartMenuStyles {
   pannelwrapper: Pick<BaseStyleGroup, "display">;
 }
 export interface TaskbarThemeStyles {
-  wrapper: Pick<BaseStyleGroup, "display" | "color">;
+  wrapper: Pick<BaseStyleGroup, "display" | "color" | "zIndex">;
   applicationBarWrapper: Pick<BaseStyleGroup, "display">;
   application: Pick<
     BaseStyleGroup,

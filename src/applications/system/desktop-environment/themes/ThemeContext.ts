@@ -70,6 +70,7 @@ const defaultFullTheme: FullTheme = {
       display: `flex flex-col bottom-[52px] left-[2px] min-w-[550px] `,
       color: `bg-[#acd0f1]`,
       border: `rounded-t-xl`,
+      zIndex: `z-99`,
     },
     startMenuHeader: {
       display: `flex p-4 items-center gap-2 `,

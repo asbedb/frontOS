@@ -21,6 +21,7 @@ const StartMenu = forwardRef<HTMLDivElement, StartMenuProps>(
       startMenuTheme.wrapper.border,
       startMenuTheme.wrapper.color,
       startMenuTheme.wrapper.display,
+      startMenuTheme.wrapper.zIndex,
     ]
       .filter(Boolean)
       .join(" ");

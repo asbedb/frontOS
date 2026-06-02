@@ -4,6 +4,7 @@ import type { TaskbarThemeStyles } from "../types";
 
 export const taskbarStyles: TaskbarThemeStyles = {
   wrapper: {
+    zIndex: `z-99`,
     display: `flex h-[50px] w-full`,
     color: `bg-gradient-to-b from-[#437efe] via-[#034dd6] via-20%
         to-[#245edb]`,
