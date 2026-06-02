@@ -1,5 +1,4 @@
 // src/system/desktop-environment/themes/types.ts
-
 interface BaseStyleGroup {
   display?: string;
   color?: string;
@@ -12,13 +11,12 @@ interface BaseStyleGroup {
   iconSrc?: string;
   iconStyle?: string;
   iconAlt?: string;
+  zIndex?: string;
 }
-
 export interface DividerStyles {
   orange: Pick<BaseStyleGroup, "display" | "color">;
   black: Pick<BaseStyleGroup, "display" | "color">;
 }
-
 export interface SystemTrayThemeStyles {
   systemTrayWrapper: Pick<BaseStyleGroup, "display" | "align" | "text">;
   systemTray: Pick<BaseStyleGroup, "display" | "align" | "color">;
@@ -28,7 +26,6 @@ export interface SystemTrayThemeStyles {
   >;
   volIcon: Pick<BaseStyleGroup, "iconSrc" | "iconStyle">;
 }
-
 export interface StartButtonThemeStyles {
   startButtonWrapper: Pick<BaseStyleGroup, "display">;
   startButton: Pick<
@@ -37,7 +34,6 @@ export interface StartButtonThemeStyles {
   >;
   startButtonIcon: Pick<BaseStyleGroup, "iconSrc" | "iconStyle">;
 }
-
 export interface StartMenuStyles {
   wrapper: Pick<BaseStyleGroup, "display" | "color" | "border">;
   startMenuHeader: Pick<BaseStyleGroup, "display" | "color" | "border">;
@@ -54,10 +50,22 @@ export interface TaskbarThemeStyles {
     "display" | "align" | "border" | "hover" | "focus" | "active"
   >;
 }
+export interface DesktopStyles {
+  wrapper: Pick<BaseStyleGroup, "display" | "color" | "zIndex">;
+}
+export interface WindowStyles {
+  wrapper: Pick<
+    BaseStyleGroup,
+    "display" | "color" | "zIndex" | "border" | "hover"
+  >;
+}
+
 export interface FullTheme {
   taskbar: TaskbarThemeStyles;
   systemtray: SystemTrayThemeStyles;
   startbutton: StartButtonThemeStyles;
   startmenustyles: StartMenuStyles;
   dividerstyles: DividerStyles;
+  desktopstyles: DesktopStyles;
+  windowstyles: WindowStyles;
 }

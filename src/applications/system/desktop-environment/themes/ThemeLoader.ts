@@ -7,6 +7,8 @@ import type {
   StartButtonThemeStyles,
   StartMenuStyles,
   DividerStyles,
+  DesktopStyles,
+  WindowStyles,
 } from "./types.ts";
 
 const THEME_COMPONENT_STYLE_FILES = [
@@ -15,6 +17,8 @@ const THEME_COMPONENT_STYLE_FILES = [
   "startButtonStyles",
   "startMenuStyles",
   "dividerStyles",
+  "desktopStyles",
+  "windowStyles",
 ];
 
 export async function loadTheme(themeName: string): Promise<FullTheme> {
@@ -55,6 +59,12 @@ export async function loadTheme(themeName: string): Promise<FullTheme> {
           break;
         case "dividerStyles":
           fullTheme.dividerstyles = loadedComponents[index] as DividerStyles;
+          break;
+        case "desktopStyles":
+          fullTheme.desktopstyles = loadedComponents[index] as DesktopStyles;
+          break;
+        case "windowStyles":
+          fullTheme.windowstyles = loadedComponents[index] as WindowStyles;
           break;
         default:
           console.warn(
@@ -111,6 +121,16 @@ async function loadDefaultTheme(): Promise<FullTheme> {
             index
           ] as DividerStyles;
           break;
+        case "desktopStyles":
+          defaultFullTheme.desktopstyles = loadedComponents[
+            index
+          ] as DesktopStyles;
+          break;
+        case "windowStyles":
+          defaultFullTheme.windowstyles = loadedComponents[
+            index
+          ] as WindowStyles;
+          break;
         default:
           console.warn(
             `ThemeLoader: Unrecognized default theme component style file: ${componentName}`,
@@ -131,6 +151,8 @@ async function loadDefaultTheme(): Promise<FullTheme> {
       startbutton: {} as StartButtonThemeStyles,
       startmenustyles: {} as StartMenuStyles,
       dividerstyles: {} as DividerStyles,
+      desktopstyles: {} as DesktopStyles,
+      windowstyles: {} as WindowStyles,
     };
   }
 }

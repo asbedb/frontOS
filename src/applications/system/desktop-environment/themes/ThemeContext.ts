@@ -65,43 +65,57 @@ const defaultFullTheme: FullTheme = {
       iconStyle: `flex h-[25px]`,
     },
   },
-  startmenustyles:{
+  startmenustyles: {
     wrapper: {
-    display: `flex flex-col bottom-[52px] left-[2px] min-w-[550px] `,
-    color: `bg-[#acd0f1]`,
-    border: `rounded-t-xl`,
+      display: `flex flex-col bottom-[52px] left-[2px] min-w-[550px] `,
+      color: `bg-[#acd0f1]`,
+      border: `rounded-t-xl`,
+    },
+    startMenuHeader: {
+      display: `flex p-4 items-center gap-2 `,
+      color: `bg-gradient-to-t from-[#487cec] via-[#034dd6] via-90% to-[#3671f0]`,
+      border: `rounded-t-xl`,
+    },
+    profilepicture: {
+      iconSrc: `img/ico/default_pfp.png`,
+      iconStyle: `flex w-[60px] border-2 rounded-md`,
+      iconAlt: `User Profile`,
+    },
+    username: {
+      text: `text-2xl`,
+    },
+    innermenu: {
+      display: `flex flex-1 flex-col `,
+      border: `border-[#487cec] border-x-8 border-y-4`,
+    },
+    pannelwrapper: {
+      display: `flex flex-1 flex-row`,
+    },
   },
-  startMenuHeader: {
-    display: `flex p-4 items-center gap-2 `,
-    color: `bg-gradient-to-t from-[#487cec] via-[#034dd6] via-90% to-[#3671f0]`,
-    border: `rounded-t-xl`,
+  dividerstyles: {
+    orange: {
+      display: `h-[4px] `,
+      color: `bg-gradient-to-r from-white/1% via-orange-500 via-50% to-white/1%`,
+    },
+    black: {
+      display: `h-[1px]`,
+      color: `bg-gradient-to-r from-white/1% via-black/50 via-50% to-white/1%`,
+    },
   },
-  profilepicture: {
-    iconSrc: `img/ico/default_pfp.png`,
-    iconStyle: `flex w-[60px] border-2 rounded-md`,
-    iconAlt: `User Profile`,
+  desktopstyles: {
+    wrapper: {
+      display: "flex w-full h-full",
+      color: "bg-black",
+    },
   },
-  username: {
-    text: `text-2xl`,
+  windowstyles: {
+    wrapper: {
+      display: "flex w-20 h-20",
+      color: "bg-black",
+      border: "rounded-2xl",
+      zIndex: "z-10",
+    },
   },
-  innermenu: {
-    display: `flex flex-1 flex-col `,
-    border: `border-[#487cec] border-x-8 border-y-4`,
-  },
-  pannelwrapper: {
-    display: `flex flex-1 flex-row`,
-  }
-  },
-  dividerstyles:{
-      orange: {
-    display: `h-[4px] `,
-    color: `bg-gradient-to-r from-white/1% via-orange-500 via-50% to-white/1%`,
-  },
-  black: {
-    display: `h-[1px]`,
-    color: `bg-gradient-to-r from-white/1% via-black/50 via-50% to-white/1%`,
-  },
-  }
 };
 
 export const ThemeContext = createContext<FullTheme | null>(defaultFullTheme);

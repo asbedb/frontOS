@@ -1,9 +1,10 @@
+import { getActiveThemeName } from "../settings/DisplaySettings";
 import { useState, useEffect } from "react";
 import { loadTheme } from "./themes/ThemeLoader";
 import { ThemeContext } from "./themes/ThemeContext";
 import type { FullTheme } from "./themes/types";
 import TaskBar from "./components/taskbar/TaskBar";
-import { getActiveThemeName } from "../settings/DisplaySettings";
+import Desktop from "./components/desktop/Desktop";
 
 function DesktopEnvironment() {
   const [currentTheme, setCurrentTheme] = useState<FullTheme | null>(null);
@@ -38,10 +39,7 @@ function DesktopEnvironment() {
   return (
     <ThemeContext.Provider value={currentTheme}>
       <div className="flex h-screen w-screen flex-col overflow-hidden bg-black text-white">
-        <div
-          className="bg-blue-800 flex h-[95svh] w-full"
-          id="xp-desktop"
-        ></div>
+        <Desktop />
         <TaskBar />
       </div>
     </ThemeContext.Provider>
