@@ -12,6 +12,7 @@ function TaskBar() {
   const taskbarWrapperClasses = [
     taskbarTheme.wrapper.display,
     taskbarTheme.wrapper.color,
+    taskbarTheme.wrapper.zIndex,
   ]
     .filter(Boolean)
     .join(" ");
@@ -19,7 +20,9 @@ function TaskBar() {
   return (
     <div className={taskbarWrapperClasses}>
       <StartButton />
-      <TaskbarApplicationWrapper link="https://asbedb.dev/">👋 asbedb.dev</TaskbarApplicationWrapper>
+      <TaskbarApplicationWrapper link="https://asbedb.dev/">
+        👋 asbedb.dev
+      </TaskbarApplicationWrapper>
       <SystemTray />
     </div>
   );
